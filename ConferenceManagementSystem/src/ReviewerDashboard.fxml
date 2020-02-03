@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="607.0" prefWidth="772.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ReviewerDashboardController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem fx:id="openPaperMenu" mnemonicParsing="false" onAction="#openPaperMenuOnClick" text="Open Paper" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem fx:id="about" mnemonicParsing="false" onAction="#aboutOnClick" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <left>
+      <AnchorPane prefHeight="582.0" prefWidth="772.0" BorderPane.alignment="CENTER">
+         <children>
+            <Text layoutX="627.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Logged In As: Reviewer" />
+            <Label fx:id="outputPaperLabel" layoutX="13.0" layoutY="140.0" prefHeight="372.0" prefWidth="188.0" />
+            <Text layoutX="13.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="File Content :" />
+            <Text layoutX="283.0" layoutY="153.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Comment :" />
+            <TextArea fx:id="commentTextArea" layoutX="352.0" layoutY="124.0" prefHeight="110.0" prefWidth="146.0" />
+            <Text layoutX="301.0" layoutY="304.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Score : " />
+            <RadioButton fx:id="excellRButton" layoutX="352.0" layoutY="291.0" mnemonicParsing="false" onAction="#radioButtonOnClick" text="Excellent Submission (Strongly Accept)" />
+            <RadioButton fx:id="goodRButton" layoutX="352.0" layoutY="318.0" mnemonicParsing="false" onAction="#radioButtonOnClick" text="Good Submission" />
+            <RadioButton fx:id="acceptableRButton" layoutX="352.0" layoutY="348.0" mnemonicParsing="false" onAction="#radioButtonOnClick" text="Acceptable" />
+            <RadioButton fx:id="rejectRButton" layoutX="352.0" layoutY="378.0" mnemonicParsing="false" onAction="#radioButtonOnClick" text="Inappropriate (Strongly Reject )" />
+            <Button fx:id="submitPaperStatusButton" layoutX="485.0" layoutY="415.0" mnemonicParsing="false" onAction="#submitPaperStatusButtonOnClick" text="Submit" />
+            <Button fx:id="signOutButton" layoutX="689.0" layoutY="46.0" mnemonicParsing="false" onAction="#signOutButtonOnClick" text="Sign Out" />
+         </children>
+      </AnchorPane>
+   </left>
+</BorderPane>

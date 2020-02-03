@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ConferenceOrganiserDashboardController">
+   <children>
+      <Text layoutX="494.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Logged In As: CO" />
+      <Button fx:id="signOutButton" layoutX="525.0" layoutY="86.0" mnemonicParsing="false" onAction="#signOutButtonOnClick" text="Sign Out" />
+      <BorderPane layoutX="-7.0" layoutY="-7.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <MenuBar prefHeight="25.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem fx:id="UserInterface" mnemonicParsing="false" onAction="#UserInterfaceOnClick" text="Add / Remove User" />
+                        <MenuItem fx:id="openPaperComments1" mnemonicParsing="false" onAction="#openPaperCommentsOnClick" text="Open Paper Comment" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Conference">
+                  <items>
+                    <MenuItem fx:id="confoStage" mnemonicParsing="false" onAction="#confoStageOnClick" text="Go to Conference Stage" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem fx:id="coAbout" mnemonicParsing="false" onAction="#coAboutOnClick" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </top>
+         <left>
+            <Label fx:id="commentLabel" prefHeight="217.0" prefWidth="192.0" BorderPane.alignment="CENTER" />
+         </left>
+      </BorderPane>
+   </children>
+</AnchorPane>
